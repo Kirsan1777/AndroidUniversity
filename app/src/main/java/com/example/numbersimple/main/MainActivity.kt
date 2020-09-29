@@ -44,9 +44,7 @@ class MainActivity : AppCompatActivity() {
         tempNumber = savedInstanceState.getInt("tempNumber") + 1
         Log.w("BelelyaevNP ", tempNumber.toString())
         startService(
-            Intent(
-                this, SimpleNumberService::class.java
-            ).putExtra("N", tempNumber)
+            Intent(this, SimpleNumberService::class.java).putExtra("N", tempNumber)
         )
     }
 
