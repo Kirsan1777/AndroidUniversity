@@ -23,14 +23,19 @@ class SimpleNumberService : Service()  {
         private fun simpleNumber(N: Int): Boolean {
             var count = 0
             var temp = 0
-
-            for(i in 1..N) {
-                temp = N % i
-                if (temp == 0){
-                    count++
+            if(N == 1){
+                return false // 1 no simple number
+            }
+            else {
+                for (i in 1..N) {
+                    temp = N % i
+                    if (temp == 0) {
+                        count++
+                    }
                 }
             }
-
-            return count == 0
+            if(count>2) {
+                return false
+            }else {return true}
         }
 }
