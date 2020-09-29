@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
     private val broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
             if ("calculate" == intent.action) {
-                val result = intent.getIntExtra("n", 1)
+                val result = intent.getIntExtra("N", 1)
                 showInf(result.toString())
                 Log.d("BelyaevNP ", result.toString())
             }
